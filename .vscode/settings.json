@@ -1,0 +1,51 @@
+{
+        "calva.customREPLCommandSnippets": [
+        {
+            "name": "Start materialui-design Server",
+            "ns": "user",
+            "repl": "clj",
+            "snippet": "(start)"
+        },
+        {
+            "name": "Stop materialui-design Server",
+            "ns": "user",
+            "repl": "clj",
+            "snippet": "(stop)"
+        },
+        {
+            "name": "Restart materialui-design Server",
+            "ns": "user",
+            "repl": "clj",
+            "snippet": "(restart)"
+        }
+    ],
+    "calva.replConnectSequences": [
+                {
+            "name": "Server only - materialui-design",
+            "projectType": "Leiningen",
+            "afterCLJReplJackInCode": "(in-ns 'user) (start)",
+            "cljsType": "none",
+            "menuSelections": {
+                "leinProfiles": [
+                    "dev"
+                ]
+            }
+        },
+        {
+            "name": "Server + Client – materialui-design",
+            "projectType": "lein-shadow",
+            "afterCLJReplJackInCode": "(start)",
+            "cljsType": "shadow-cljs",
+            "menuSelections": {
+                "leinProfiles": [
+                    "dev"
+                ],
+                "cljsLaunchBuilds": [
+                    "app",
+                    "test"
+                ],
+                "cljsDefaultBuild": "app"
+            }
+        }
+    ]
+}

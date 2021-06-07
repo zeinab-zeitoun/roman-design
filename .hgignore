@@ -1,0 +1,23 @@
+syntax: glob
+pom.xml
+pom.xml.asc
+*.jar
+*.class
+.gitignore
+.git/**
+dev-config.edn
+test-config.edn
+.vscode
+.nrepl-port
+.rebel_readline_history
+node_modules
+.shadow-cljs
+
+syntax: regexp
+^.nrepl-port
+^.lein-.*
+^target/
+^classes/
+^checkouts/
+^log/
+profiles.clj
